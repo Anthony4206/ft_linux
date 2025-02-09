@@ -75,13 +75,15 @@ else echo "ERROR: Linux Kernel does NOT support UNIX 98 PTY"; fi
 
 alias_check() {
    if ! $1 --version 2>&1 | grep -qi $2
-   else sudo ln -sf;
-   then printf "OK:    %-4s is $2\n" "$1"; fi
+   then
+	   sudo ln -sf $(which $3) $(which $1);
+	 printf "OK:    %-4s is $2\n" "$1"
+   else printf "OK:    %-4s is $2\n" "$1"; fi
 }
 echo "Aliases:"
-alias_check awk GNU
-alias_check yacc Bison
-alias_check sh Bash
+alias_check awk GNU gawk
+alias_check yacc Bison bison
+alias_check sh Bash bash
 
 echo "Compiler check:"
 if printf "int main(){}" | g++ -x c++ -
