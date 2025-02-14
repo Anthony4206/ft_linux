@@ -4,7 +4,7 @@
 # If you have tools installed in other directories, adjust PATH here AND
 # in ~lfs/.bashrc (section 4.4) as well.
 
-sudo apt intall -y bison flex texinfo
+sudo apt intall -y bison flex texinfo gawk m4
 
 LC_ALL=C 
 PATH=/usr/bin:/bin
