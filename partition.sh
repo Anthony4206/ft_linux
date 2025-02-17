@@ -15,8 +15,7 @@
 #   - p: print the partition table
 #   - w: write table to disk and exit
 
-echo -e "n\np\n1\n\n+200M\n\
-	a\n\
+echo -e "n\np\n1\n\n+200M\n\a\n\
 	n\np\n2\n\n+2G\n\
 	n\np\n3\n\n\n\
 	t\n2\n82\n\
@@ -24,11 +23,11 @@ echo -e "n\np\n1\n\n+200M\n\
 
 ### FORMATTING ###
 # mkfs: build a linux filesystem
-sudo mkfs.ext4 /dev/sdb3 # Format root with ext4 (fourth extended filesystem) 
-sudo mkfs.ext4 /dev/sdb1: format boot with ext4
+sudo mkfs.ext4 /dev/sdb3 # format root with ext4 (fourth extended filesystem)
+sudo mkfs.ext4 /dev/sdb1 # format boot with ext4
 # mkswap: set up a Linux swap area
-sudo mkswap /dev/sdb2: format swap (an exchange partition)
-sudo swapon /dev/sdb2: activate swap
+sudo mkswap /dev/sdb2 # format swap (an exchange partition)
+sudo swapon /dev/sdb2 # activate swap
 ### MOUNTING  ###
 export LFS=/mnt/lfs
 echo "export LFS=/mnt/lfs" >> /home/alevasse/.bashrc
@@ -37,8 +36,8 @@ echo "export LFS=/mnt/lfs" | sudo tee -a /root/.bashrc > /dev/null
 sudo mkdir -vp $LFS
 sudo mount -vt ext4 /dev/sdb3 $LFS
 sudo mkdir -vp $LFS/boot
-sudo mount -Vt ext4 /dev/sdb1 $LFS/boot
+sudo mount -vt ext4 /dev/sdb1 $LFS/boot
 echo "/dev/sdb3	/mnt/lfs	ext4	defaults	1	1" \
-| sudo tee -a /etc/fstab > /dev/null 
+	| sudo tee -a /etc/fstab > /dev/null 
 echo "/dev/sdb1	/mnt/lfs/boot	ext4	defaults	1	1" \
-| sudo tee -a /etc/fstab > /dev/null
+	| sudo tee -a /etc/fstab > /dev/null
