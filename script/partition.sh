@@ -29,7 +29,7 @@ sudo mkfs.ext4 /dev/sdb1 # format boot with ext4
 sudo mkswap /dev/sdb2 # format swap (an exchange partition)
 sudo swapon -v /dev/sdb2 # activate swap
 ### MOUNTING  ###
-export LFS=/mnt/lfs
+LFS=/mnt/lfs
 echo "export LFS=/mnt/lfs" >> /home/alevasse/.bashrc
 echo "export LFS=/mnt/lfs" | sudo tee -a /root/.bashrc > /dev/null
 # mount: mount a filesystem (allows to operate a disk or partition)
