@@ -77,7 +77,7 @@ https://www.kernel.org/pub/linux/utils/util-linux/v2.32/util-linux-2.32.1.tar.xz
 https://mirror.math.princeton.edu/pub/vim/unix/vim-8.1.tar.bz2
 https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.44.tar.gz
 https://tukaani.org/xz/xz-5.2.4.tar.xz
-https://ftp.osuosl.org/pub/lfs/lfs-packages/8.3/zlib-1.2.11.tar.xz
+
 http://www.linuxfromscratch.org/patches/lfs/8.3/bzip2-1.0.6-install_docs-1.patch
 http://www.linuxfromscratch.org/patches/lfs/8.3/coreutils-8.30-i18n-1.patch
 http://www.linuxfromscratch.org/patches/lfs/8.3/glibc-2.28-fhs-1.patch
