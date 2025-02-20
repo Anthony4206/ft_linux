@@ -1,17 +1,17 @@
 #/bin/sh
 
-#LFS=/mnt/lfs
-#
-## Limited Directory Layout
-#sudo mkdir -pv $LFS/tools
-#sudo ln -sv $LFS/tools /
-#
-## Adding the LFS user
-#sudo groupadd lfs
-#sudo useradd -s /bin/bash -g lfs -m -k /dev/null lfs
-#echo "lfs:123" | sudo chpasswd
-#sudo chown -v lfs $LFS/tools $LFS/sources
-#sudo passwd -d lfs
+LFS=/mnt/lfs
+
+# Limited Directory Layout
+sudo mkdir -pv $LFS/tools
+sudo ln -sv $LFS/tools /
+
+# Adding the LFS user
+sudo groupadd lfs
+sudo useradd -s /bin/bash -g lfs -m -k /dev/null lfs
+echo "lfs:123" | sudo chpasswd
+sudo chown -v lfs $LFS/tools $LFS/sources
+sudo passwd -d lfs
 
 # Setting up lfs config files
 sudo cp ./lfs/bash_profile /home/lfs/.bash_profile
