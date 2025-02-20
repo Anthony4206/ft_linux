@@ -28,6 +28,7 @@ sudo mkfs.ext4 /dev/sdb1 # format boot with ext4
 # mkswap: set up a Linux swap area
 sudo mkswap /dev/sdb2 # format swap (an exchange partition)
 sudo swapon -v /dev/sdb2 # activate swap
+
 ### MOUNTING  ###
 LFS=/mnt/lfs
 echo "export LFS=/mnt/lfs" >> /home/alevasse/.bashrc
