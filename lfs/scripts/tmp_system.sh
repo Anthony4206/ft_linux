@@ -1,4 +1,4 @@
-l#/bin/sh
+#/bin/sh
 
 cd $LFS/sources
 
@@ -114,7 +114,7 @@ mkdir -v build && cd build
     --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/8.2.0
 make && make install
 cd $LFS/sources
-rm gcc-8.2.0.tar.xz
+rm -rf gcc-8.2.0
 
 # Binutils 2
 tar -xf binutils-2.31.1.tar.xz
