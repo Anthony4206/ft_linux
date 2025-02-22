@@ -96,7 +96,7 @@ mkdir -v build && cd build
 make && make install
 echo 'int main(){}' > dummy.c
 $LFS_TGT-gcc dummy.c
-readelf -l a.out | grep ': /tools' >> /home/alevasse/lfs-log.txt
+readelf -l a.out | grep ': /tools' >> /home/lfs/lfs-log.txt
 cd $LFS/sources
 rm -rf glibc-2.28
 
@@ -179,7 +179,7 @@ make && make install
 ln -sv gcc /tools/bin/cc
 echo 'int main(){}' > dummy.c
 cc dummy.c
-readelf -l a.out | grep ': /tools' >> /home/alevasse/lfs-log.txt
+readelf -l a.out | grep ': /tools' >> /home/lfs/lfs-log.txt
 cd $LFS/sources
 rm -rf gcc-8.2.0
 
