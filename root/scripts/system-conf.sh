@@ -478,12 +478,12 @@ rm -rf gobject-introspection-1.56.1
 
 # ICU
 tar -xf icu4c-62_1-src.tgz
-cd icu4c-62_1
+cd icu
 cd source                                    &&
 ./configure --prefix=/usr                    &&
 make && make install
 cd /sources/xc
-rm -rf icu4c-62_1
+rm -rf icu
 
 # FreeType
 tar -xf freetype-2.9.1.tar.bz2
